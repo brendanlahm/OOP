@@ -1,6 +1,6 @@
 public class basket1 {
    private Product[] products;
-   
+
    public basket1(Product[] products){
        this.products = products;
    }

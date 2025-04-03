@@ -21,6 +21,12 @@ public class CharStackRun {
         // Print stack after pop
         System.out.println("Stack after popping: " + stack);
 
+        // Push again
+        stack.push('e');
+        System.out.println("Stack after pushing: " + stack);
+
+        // Print stack size
+        System.out.println("Stack size: " + stack.size());
     }
 
 }

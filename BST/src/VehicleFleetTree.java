@@ -13,11 +13,19 @@ public class VehicleFleetTree {
         // Setting the root vehicle
         if (root == null) {
             root = v;
-            return;
+            System.out.println("Root vehicle: " + root.getVehicleId() + ", " + root.getMake() + ", " + root.getModel() + ", " + root.getYear());
+
+            // Setting vehicle to the left of root
+        } else if (v.vehicleId < root.getVehicleId()) {
+            root.left = v;
+            System.out.println("Added vehicle (left): " + root.left.getVehicleId() + ", " + root.left.getMake() + ", " + root.left.getModel() + ", " + root.left.getYear());
+
+            // Setting vehicle to the right of root
+        } else if (v.vehicleId > root.getVehicleId()) {
+            root.right = v;
+            System.out.println("Added vehicle (right): " + root.right.getVehicleId() + ", " + root.right.getMake() + ", " + root.right.getModel() + ", " + root.right.getYear());
         }
 
-        System.out.println(root.getVehicleId());
-        System.out.println(v.getVehicleId());
     }
 
 }

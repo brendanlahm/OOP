@@ -24,6 +24,8 @@ public class Vehicle {
     public String getMake() { return make; }
     public String getModel() { return model; }
     public int getYear() { return year; }
+    public Vehicle getLeft() { return left; }
+    public Vehicle getRight() { return right; }
 
     // Setters
     public void setVehicleId(int vehicleId) { this.vehicleId = vehicleId; }

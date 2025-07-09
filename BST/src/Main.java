@@ -5,11 +5,9 @@ public class Main {
     // Object-Oriented Method
     public static void main(String[] args) {
 
-    BSTImpl bst = new BSTImpl(); // Constructor
-    bst.add(10);
-    bst.add(20);
-
-    System.out.println(bst); // Print the Tour info
+    VehicleFleetTree tree = new VehicleFleetTree();
+    tree.add(301, "Hyundai", "Sonata", 2013, null, null);
+    tree.add(302, "Hyundai", "Accord", 2024, null, null);
 
     }
 

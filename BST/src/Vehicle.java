@@ -10,7 +10,7 @@ public class Vehicle {
     Vehicle left, right;
 
     // Constructor
-    public Vehicle(int vehicleId, String make, String model, int year) {
+    public Vehicle(int vehicleId, String make, String model, int year, Vehicle left, Vehicle right) {
         this.vehicleId = vehicleId;
         this.make = make;
         this.model = model;

@@ -14,7 +14,6 @@ public class PersonQueueImpl {
     public void enqueue(Person person) {
         QueueElement newElement = new QueueElement(person, null);
         front = rear = newElement;
-
     }
 
     // Method for removing the person from the front of the queue

@@ -4,7 +4,7 @@ public class BSTImpl {
 
     IntElement root;
 
-    class IntElement {
+    public class IntElement {
         int value;
         IntElement left;
         IntElement right;
@@ -14,6 +14,7 @@ public class BSTImpl {
             left = l;
             right = r;
         }
+        public int getValue() { return value; }
     }
 
     public void add(int v) {
@@ -25,6 +26,8 @@ public class BSTImpl {
             return;
         }
 
+        System.out.println(e.getValue());
+        System.out.println(root.getValue());
     }
 
 }

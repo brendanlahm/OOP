@@ -12,5 +12,5 @@ exercise0: Inheritance
 
 exercise1: Stack Datastructure
 
-exercise2: Linked Lists
+exercise2a: Linked Lists
 

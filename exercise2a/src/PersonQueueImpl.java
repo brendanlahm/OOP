@@ -13,11 +13,21 @@ public class PersonQueueImpl {
     // Method for adding a person
     public void enqueue(Person person) {
         QueueElement newElement = new QueueElement(person, null);
-        front = rear = newElement;
+
+        if (rear == null) {
+            front = newElement;
+            rear = newElement; } else {
+            rear.setNext(newElement);
+            rear = newElement;
+}
     }
 
     // Method for removing the person from the front of the queue
     public Person dequeue() {
+
+        if (front == null) {
+            throw new IllegalStateException("Queue is empty");
+        }
 
         Person person = front.getValue();
         front = front.getNext();
@@ -26,15 +36,15 @@ public class PersonQueueImpl {
         if (front == null) {
             rear = null;
         }
-
         return person;
     }
 
     // Method for displaying queue
     public void displayQueue() {
         QueueElement current = front;
+        System.out.println("Queue:");
         while (current != null) {
-            System.out.println(current.getValue());
+            System.out.println("- " + current.getValue());
             current = current.getNext();
         }
 

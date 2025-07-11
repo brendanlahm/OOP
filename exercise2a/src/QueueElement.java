@@ -1,4 +1,4 @@
-// This class is a wrapper for the Person class (implementation)
+// This class is a wrapper for the Person class
 
 public class QueueElement {
 
@@ -12,24 +12,20 @@ public class QueueElement {
         this.next = next;
     }
 
-    // Getter
+    // Getters
     public Person getValue() {
         return value;
     }
-
-    // Setter
-    public void setValue(Person value) {
-        this.value = value;
-    }
-
-    // Getter
     public QueueElement getNext() {
         return next;
     }
 
-    // Setter
+    // Setters
+    public void setValue(Person value) {
+        this.value = value;
+    }
     public void setNext(QueueElement value) {
-        this.next = next;
+        this.next = value;
     }
 
 }

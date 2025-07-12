@@ -15,11 +15,6 @@ public class Main {
         fleet.add(new Vehicle(303, "Lamborghini", "Huracan", 2023, null, null));
         fleet.add(new Vehicle(311, "Lamborghini", "Aventador", 2020, null, null));
 
-//        System.out.println("In-order traversal of fleet:");
-//        for (Vehicle v : fleet) {
-//            System.out.println(v);
-//        }
-
         // Create a vehicle list
         List<Vehicle> vehicleList = new ArrayList<>();
         // Add vehicles
@@ -35,6 +30,5 @@ public class Main {
         for (Vehicle v : vehicleList) {
             System.out.println(v);
         }
-
     }
 }

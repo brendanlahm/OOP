@@ -8,12 +8,16 @@ public class Main {
         fibSeq.fibIT(0, 1, 1); // Run the iterative method
 
         // Recursive method
-        FibonacciSeq recSeq = new FibonacciSeq(3);
-        recSeq.fibRC(34);
+//        FibonacciSeq recSeq = new FibonacciSeq(3);
+//        recSeq.fibRC(34);
 
         // Instantiate the Power Algorithm
 //        powerCalculation powCalc = new powerCalculation(3); // a = # Iterations
 //        powCalc.power(2); // Run the calculation
+
+        // Recursive method
+        powerCalculation recCalc = new powerCalculation(3); // a = # Iterations
+        recCalc.powerRC(12); // Run the calculation
 
         // Forming an array
         String[] cars = {"\nVolvo", "BMW", "Ford", "Mazda"};

@@ -16,4 +16,17 @@ public class powerCalculation {
         return n;
     }
 
+    // Recursive method
+    public double powerRC(double n) {
+        if (n == 0) {
+            return 1;
+        } else if (n > 0) {
+            System.out.println("\nn = " + n);
+            return a * powerRC(n - 1);
+        } else {
+            // For negative powers: a^(-n) = 1 / a^n
+            System.out.println("\nn = " + n);
+            return 1 / powerRC(-n);
+        }
+    }
 }

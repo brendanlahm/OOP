@@ -4,10 +4,16 @@ public class Main {
     public static void main(String[] args) {
 
         // Instantiate the Fibonacci Sequence
-        FibonacciSeq fibSeq = new FibonacciSeq(8); // n = # Recursions
+        FibonacciSeq fibSeq = new FibonacciSeq(3); // n = # Iterations
+        fibSeq.fibIT(0, 1, 1); // Run the iterative method
 
-        // Run the method
-        fibSeq.fibIT(0, 1, 1);
+        // Recursive method
+        FibonacciSeq recSeq = new FibonacciSeq(3);
+        recSeq.fibRC(34);
+
+        // Instantiate the Power Algorithm
+//        powerCalculation powCalc = new powerCalculation(3); // a = # Iterations
+//        powCalc.power(2); // Run the calculation
 
         // Forming an array
         String[] cars = {"\nVolvo", "BMW", "Ford", "Mazda"};

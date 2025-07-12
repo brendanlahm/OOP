@@ -35,8 +35,10 @@ public class Vehicle implements Comparable<Vehicle>{
     }
 
     // Comparable Interface
+    @Override
     public int compareTo(Vehicle other) {
         return Integer.compare(this.vehicleId, other.vehicleId);
+        //return CharSequence.compare(this.make, other.make);
     }
 
     // Method for printing vehicle info

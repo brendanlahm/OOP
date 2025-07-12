@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        // Initiate the tree
+        // Instantiate the tree
         GenericBSTImpl<Vehicle> fleet = new GenericBSTImpl<>();
 
         // Add cars to the tree

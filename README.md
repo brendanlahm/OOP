@@ -16,7 +16,7 @@ exercise2a: Linked Lists
 
 exercise4: Generics
 
+exercise7: JUnitTests
+
 exercise8: Recursion
-
-
 

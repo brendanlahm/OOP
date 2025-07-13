@@ -20,3 +20,5 @@ exercise7: JUnitTests
 
 exercise8: Recursion
 
+exercise9: Sorting
+

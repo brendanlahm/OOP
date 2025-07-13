@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -12,12 +10,12 @@ public class Main {
 //        recSeq.fibRC(34);
 
         // Instantiate the Power Algorithm
-//        powerCalculation powCalc = new powerCalculation(3); // a = # Iterations
-//        powCalc.power(2); // Run the calculation
+//        powerCalculation powCalc = new powerCalculation();
+//        powCalc.power(3, 2); // Run the calculation
 
         // Recursive method
-        powerCalculation recCalc = new powerCalculation(3); // a = # Iterations
-        recCalc.powerRC(12); // Run the calculation
+        powerCalculation recCalc = new powerCalculation(); //
+        recCalc.powerRC(5, 6); // Run the calculation
 
         // Forming an array
         String[] cars = {"\nVolvo", "BMW", "Ford", "Mazda"};

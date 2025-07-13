@@ -10,15 +10,16 @@ public class Main {
         System.out.println(Arrays.toString(newSeq));
 
         // Instantiate the Linked List
-        Node<Integer> head = new Node<>(5);
-        head.next = new Node<>(2);
-        head.next.next = new Node<>(3);
-        head.next.next.next = new Node<>(6);
+        Node<Student> stud = new Node<>(new Student("Harry Potter", 6485267));
+        stud.next = new Node<>(new Student("Ron Weasley", 6485249));
+        stud.next.next = new Node<>(new Student("Hermione Granger", 6485286));
+        stud.next.next.next = new Node<>(new Student("Draco Malfoy", 6485221));
+        stud.next.next.next.next = new Node<>(new Student("Harry Potter", 2156591));
 
-        // Implementing the Bubble Sort algorithm
-        BubbleSort<Integer> sorter = new BubbleSort<>();
-        head = sorter.sort(head); // sort the list
-        sorter.printList(head); // print the sorted list
+        // Implementing the Bubble Sort algorithm on Student class
+        BubbleSort<Student> sorter2 = new BubbleSort<>(new StudentComparator());
+        stud = sorter2.sort(stud);
+        sorter2.printList(stud);
 
     }
 

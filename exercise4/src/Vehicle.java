@@ -1,6 +1,6 @@
 public class Vehicle implements Comparable<Vehicle>{
 
-    // Private attributes
+    // Public attributes
     int vehicleId;
     String make;
     String model;

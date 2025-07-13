@@ -1,4 +1,14 @@
-public class BubbleSort<T extends Comparable<T>> {
+import java.util.Comparator;
+
+public class BubbleSort<T> {
+
+    // Private attributes
+    private Comparator<T> comparator;
+
+    // Constructor
+    public BubbleSort(Comparator<T> comparator) {
+        this.comparator = comparator;
+    }
 
     // Public wrapper method
     public Node<T> sort(Node<T> head) {
@@ -19,7 +29,7 @@ public class BubbleSort<T extends Comparable<T>> {
             ptr1 = head;
 
             while (ptr1.next != lptr) {
-                if (ptr1.data.compareTo(ptr1.next.data) > 0) {
+                if (comparator.compare(ptr1.data, ptr1.next.data) > 0) {
                     // Swap data
                     T temp = ptr1.data;
                     ptr1.data = ptr1.next.data;

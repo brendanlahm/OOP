@@ -31,8 +31,8 @@ public class Bundesliga {
 
         Map<Integer, Club> clubs = clubsList.stream()
                 .collect(Collectors.toMap(
-                        Club::getId,
-                        Function.identity(),
+                        Club::getId, // key = club's ID
+                        Function.identity(), // value = the club object itself
                         (existing, replacement) -> existing  // keep the first, discard duplicates
                 ));
 

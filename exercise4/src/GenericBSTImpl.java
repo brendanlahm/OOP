@@ -28,7 +28,7 @@ public class GenericBSTImpl<T extends Comparable<T>> implements Iterable<T> {
             return new Node<>(value);
         }
 
-        int cmp = value.compareTo(current.data);
+        int cmp = value.compareTo(current.data); // Comparable Interface
 
         if (cmp < 0) {
             current.left = addRecursive(current.left, value);

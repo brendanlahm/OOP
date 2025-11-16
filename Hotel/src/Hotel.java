@@ -1,9 +1,9 @@
 public class Hotel {
 
     // Private fields
-    private String Location;
-    private int Rooms;
-    private int Price;
+    public String Location;
+    public int Rooms;
+    public int Price;
 
     // Constructor
     public Hotel(String Location, int Rooms, int Price) {
@@ -29,7 +29,7 @@ public class Hotel {
     // Display method
     @Override
     public String toString() {
-        return Location;
+        return "\nLocation: " + Location + "\nRooms: " + Rooms + "\nPrice: " + Price;
     }
 
 }

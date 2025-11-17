@@ -17,22 +17,22 @@ public class Main {
         Hotel b = queue.get(1);
         Hotel c = queue.get(2);
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-
         // Comparator
         HotelComparator comparator = new HotelComparator();
         if (comparator.compare(a, b) == 1) {
             System.out.println("\nHotel A more expensive than Hotel B");
-        } else {
-            if (comparator.compare(a, b) == -1) {
+        } else if (comparator.compare(a, b) == -1) {
                 System.out.println("\nHotel B more expensive than Hotel A");
-            } else {
-                if (comparator.compare(a, b) == 0) {
+            } else if (comparator.compare(a, b) == 0) {
                     System.out.println("\nHotel B same price as Hotel A");
                 }
-            }
-        }
+
+        // Working w/ Nodes to create the Linked List
+        Node<Hotel> list = new Node<>(new Hotel("Sea Shell: Samssara", 42, 200));
+        list.next = new Node<>(new Hotel("Sea Shell: Havelock", 101, 300));
+        list.next.next = new Node<>(new Hotel("Sea Shell: Port Blair", 330, 420));
+
+        // Display the Linked List
+        System.out.println(list);
     }
 }

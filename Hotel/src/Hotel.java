@@ -12,19 +12,12 @@ public class Hotel {
         this.Price = Price;
     }
 
-    // Getter
+    // Getters
     public String getLocation() {
         return Location;
     }
     public int getRooms() {return Rooms;}
     public int getPrice() {return Price;}
-
-    // Setter
-    public void setLocation(String Location) {
-        this.Location = Location;
-    }
-    public void setRooms(int Rooms) {this.Rooms = Rooms;}
-    public void setPrice(int Price) {this.Price = Price;}
 
     // Display method
     @Override

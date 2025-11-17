@@ -13,7 +13,7 @@ public class Node<T> {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        Node<T> current = this;
+        Node<T> current = this; // Set the current Node as the Head Node
         while (current != null) {
             sb.append(current.data);   // calls Hotel.toString()
             current = current.next;

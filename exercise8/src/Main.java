@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Instantiate the Fibonacci Sequence
-        FibonacciSeq fibSeq = new FibonacciSeq(3); // n = # Iterations
+        FibonacciSeq fibSeq = new FibonacciSeq(4); // n = # Iterations
         fibSeq.fibIT(0, 1, 1); // Run the iterative method
 
         // Recursive method
@@ -20,5 +20,14 @@ public class Main {
         // Forming an array
         String[] cars = {"\nVolvo", "BMW", "Ford", "Mazda"};
         System.out.println("\nFirst car in sequence: " + cars[0]);
+
+        // Modular Calculation
+        int n = 2346;
+        int total = 0;
+        while (n > 0) {
+            total += n % 10;
+            n /= 10;
+        }
+        System.out.println(total);
     }
 }

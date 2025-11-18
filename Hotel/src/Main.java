@@ -4,15 +4,15 @@ public class Main {
     public static void main(String[] args) {
 
         // Working w/ Nodes to create the Linked List
-        Node<Hotel> list = new Node<>(new Hotel("Samssara", 42, 200));
-        list.next = new Node<>(new Hotel("Havelock", 101, 300));
-        list.next.next = new Node<>(new Hotel("Port Blair", 330, 420));
-        list.next.next.next = new Node<>(new Hotel("Neil", 50, 250));
+        Node<Hotel> list = new Node<>(new Hotel("Havelock", 101, 300));
+        list.next = new Node<>(new Hotel("Port Blair", 330, 420));
+        list.next.next = new Node<>(new Hotel("Neil", 50, 250));
+        list.next.next.next = new Node<>(new Hotel("Samssara", 42, 200));
 
         // Display the Linked List
         System.out.println(list);
 
-        // Create Hotels as Arrays
+        // Convert Nodes to Arrays
         Node<Hotel> a = list;
         Node<Hotel> b = list.next;
         Node<Hotel> c = list.next.next;

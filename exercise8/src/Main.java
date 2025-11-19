@@ -28,6 +28,6 @@ public class Main {
             total += n % 10;
             n /= 10;
         }
-        System.out.println(total);
+        System.out.println("\n" + total);
     }
 }

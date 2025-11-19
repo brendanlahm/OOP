@@ -8,6 +8,8 @@ BST: Binary Search Tree
 
 Hotel: Linked List for a Hotel Catalog
 
+Sorting: Bubble Sort for a Hotel Catalog
+
 
 
 exercise0: Inheritance

@@ -21,7 +21,7 @@ public class Main {
         String[] cars = {"\nVolvo", "BMW", "Ford", "Mazda"};
         System.out.println("\nFirst car in sequence: " + cars[0]);
 
-        // Modular Calculation
+        // Modular Calculation: Summarizing an integer's digits
         int n = 2346;
         int total = 0;
         while (n > 0) {

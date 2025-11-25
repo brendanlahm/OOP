@@ -10,7 +10,7 @@ public class Main {
         list.next.next.next = new Node<>(new Hotel("Samssara", 42, 200));
 
         // Display the Linked List
-        System.out.println(list);
+        //System.out.println(list);
 
         // Convert Nodes to Arrays
         Node<Hotel> a = list;
@@ -21,11 +21,17 @@ public class Main {
         // Comparator
         HotelComparator comparator = new HotelComparator();
         if (comparator.compare(a, b) == 1) {
-            System.out.println("\nHotel A more expensive than Hotel B");
+            System.out.println("\nHotel A has more rooms than Hotel B");
         } else if (comparator.compare(a, b) == -1) {
-                System.out.println("\nHotel B more expensive than Hotel A");
+                System.out.println("\nHotel B has more rooms than Hotel A");
         } else if (comparator.compare(a, b) == 0) {
-                    System.out.println("\nHotel B same price as Hotel A"); }
+                    System.out.println("\nHotel B has same # rooms as Hotel A"); }
+        if (comparator.compare(b, c) == 1) {
+            System.out.println("\nHotel B has more rooms than Hotel C");
+        } else if (comparator.compare(b, c) == -1) {
+            System.out.println("\nHotel C has more rooms than Hotel B");
+        } else if (comparator.compare(b, c) == 0) {
+            System.out.println("\nHotel B has same # rooms as Hotel C"); }
 
         // Convert to Array List
         List<Node<Hotel>> hotelList = new ArrayList<>();
@@ -35,12 +41,13 @@ public class Main {
         hotelList.add(list.next.next.next);
 
         // Sort the list
-        //hotelList.sort(new HotelComparator());
+        hotelList.sort(new HotelComparator());
 
-//        // Loop through & print each Node in the sorted list
-//        for (Node<Hotel> node : hotelList) {
-//            System.out.println(node.data);
-//        }
+        // Loop through & print each Node in the sorted list
+        System.out.println("Sort the list by # Rooms\n");
+        for (Node<Hotel> node : hotelList) {
+            System.out.println(node.data);
+        }
 
         // Implement Iterator
         HotelCatalog catalog = new HotelCatalog();
@@ -48,6 +55,7 @@ public class Main {
         catalog.add(new Hotel("Neil", 50, 250));
         catalog.add(new Hotel("Samssara", 42, 200));
         catalog.add(new Hotel("Havelock", 101, 300));
+        System.out.println("Iterate through Hotel Catalog\n");
         for (Hotel node : catalog) {
             System.out.println(node);
         }

@@ -35,11 +35,22 @@ public class Main {
         hotelList.add(list.next.next.next);
 
         // Sort the list
-        hotelList.sort(new HotelComparator());
+        //hotelList.sort(new HotelComparator());
 
-        // Loop through & print each Node in the sorted list
-        for (Node<Hotel> node : hotelList) {
-            System.out.println(node.data);
+//        // Loop through & print each Node in the sorted list
+//        for (Node<Hotel> node : hotelList) {
+//            System.out.println(node.data);
+//        }
+
+        // Implement Iterator
+        HotelCatalog catalog = new HotelCatalog();
+        catalog.add(new Hotel("Port Blair", 330, 420));
+        catalog.add(new Hotel("Neil", 50, 250));
+        catalog.add(new Hotel("Samssara", 42, 200));
+        catalog.add(new Hotel("Havelock", 101, 300));
+        for (Hotel node : catalog) {
+            System.out.println(node);
         }
+
     }
 }

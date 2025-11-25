@@ -44,7 +44,7 @@ public class Main {
         hotelList.sort(new HotelComparator());
 
         // Loop through & print each Node in the sorted list
-        System.out.println("Sort the list by # Rooms\n");
+        System.out.println("\nSort the list by # Rooms");
         for (Node<Hotel> node : hotelList) {
             System.out.println(node.data);
         }
@@ -55,7 +55,7 @@ public class Main {
         catalog.add(new Hotel("Neil", 50, 250));
         catalog.add(new Hotel("Samssara", 42, 200));
         catalog.add(new Hotel("Havelock", 101, 300));
-        System.out.println("Iterate through Hotel Catalog\n");
+        System.out.println("\nIterate through Hotel Catalog");
         for (Hotel node : catalog) {
             System.out.println(node);
         }

@@ -8,7 +8,8 @@ public class Main {
         Node<Hotel> list = new Node<>(new Hotel("Havelock", 101, 300));
         list.next = new Node<>(new Hotel("Port Blair", 330, 420));
         list.next.next = new Node<>(new Hotel("Neil", 50, 250));
-        list.next.next.next = new Node<>(new Hotel("Samssara", 42, 200));
+        list.next.next.next = new Node<>(new Hotel("Samssara", 42, 500));
+        list.next.next.next.next = new Node<>(new Hotel("Samssara", 42, 150));
 
         // Display the Linked List
         System.out.println(list);
@@ -22,25 +23,32 @@ public class Main {
         } else if (comparator.compare(list, list.next) == 0) {
                     System.out.println("\nHotel B has same # rooms as Hotel A"); }
 
-        // Convert to Array List
-        List<Node<Hotel>> hotelList = new ArrayList<>();
-        hotelList.add(list);
-        hotelList.add(list.next);
-        hotelList.add(list.next.next);
-        hotelList.add(list.next.next.next);
-
-        // Sort the list
-        hotelList.sort(new HotelComparator());
+//        // Convert to Array List
+//        List<Node<Hotel>> hotelList = new ArrayList<>();
+//        hotelList.add(list);
+//        hotelList.add(list.next);
+//        hotelList.add(list.next.next);
+//        hotelList.add(list.next.next.next);
+//
+//        // Sort the list
+//        hotelList.sort(new HotelComparator());
 
         // Loop through & print each Node in the sorted list
-        System.out.println("\nSort the list by # Rooms");
-        for (Node<Hotel> node : hotelList) {
-            System.out.println(node.data);
-        }
+//        System.out.println("\nSort the list by # Rooms using a for loop & ArrayList");
+//        for (Node<Hotel> node : hotelList) {
+//            System.out.println(node.data);
+//        }
+
+        // Bubble Sort w/ Comparator ///////////////////////////////////////////
+        // Instantiate BubbleSort
+        BubbleSort bubSort = new BubbleSort(new HotelComparator());
+        Node<Hotel> list1 = bubSort.sort(list); // Sort the list
+        System.out.println("\nSort the list by # Rooms using Bubble Sort");
+        bubSort.printList(list1);
 
         // Iterating ///////////////////////////////////////////
         // Implement Iterator w/o the Iterable Interface
-        System.out.println("\nIterate through Node list (unsorted)");
+        System.out.println("\nIterate through sorted Node list");
         HotelIterator2 iter = new HotelIterator2(list, 100); // maxRooms is dynamic parameter
         while(iter.hasNext()){
             System.out.println(iter.next());

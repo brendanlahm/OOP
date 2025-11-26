@@ -16,7 +16,7 @@ public class Main {
         BubbleSort<Hotel> bubSort = new BubbleSort(new HotelComparator());
         Node<Hotel> list1 = bubSort.sort(list);
         System.out.println("\nSort the list by Price");
-        bubSort.printList(list1);
+        //bubSort.printList(list1);
 
         // Create List of Hotels
         ArrayList<Hotel> catalog = new ArrayList<>();
@@ -31,5 +31,12 @@ public class Main {
         while (iter.hasNext()) {
             System.out.println(iter.next());
         }
+
+        // Array Sorting
+        String[] array = {"Metallic", "Silver", "Gold", "Bronze"};
+        System.out.println(Arrays.toString(array));
+        Sorting sorting = new Sorting();
+        sorting.swap(array, 1, 3);
+
     }
 }

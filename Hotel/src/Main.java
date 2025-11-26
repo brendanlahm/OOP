@@ -3,6 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
+        // Linked List ///////////////////////////////////////////
         // Working w/ Nodes to create the Linked List
         Node<Hotel> list = new Node<>(new Hotel("Havelock", 101, 300));
         list.next = new Node<>(new Hotel("Port Blair", 330, 420));
@@ -10,28 +11,16 @@ public class Main {
         list.next.next.next = new Node<>(new Hotel("Samssara", 42, 200));
 
         // Display the Linked List
-        //System.out.println(list);
+        System.out.println(list);
 
-        // Convert Nodes to Arrays
-        Node<Hotel> a = list;
-        Node<Hotel> b = list.next;
-        Node<Hotel> c = list.next.next;
-        Node<Hotel> d = list.next.next.next;
-
-        // Comparator
+        // Comparator ///////////////////////////////////////////
         HotelComparator comparator = new HotelComparator();
-        if (comparator.compare(a, b) == 1) {
-            System.out.println("\nHotel A has more rooms than Hotel B");
-        } else if (comparator.compare(a, b) == -1) {
-                System.out.println("\nHotel B has more rooms than Hotel A");
-        } else if (comparator.compare(a, b) == 0) {
+        if (comparator.compare(list, list.next) == 1) {
+            System.out.println("\nHotel list has more rooms than Hotel list.next");
+        } else if (comparator.compare(list, list.next) == -1) {
+                System.out.println("\nHotel list.next has more rooms than Hotel list");
+        } else if (comparator.compare(list, list.next) == 0) {
                     System.out.println("\nHotel B has same # rooms as Hotel A"); }
-        if (comparator.compare(b, c) == 1) {
-            System.out.println("\nHotel B has more rooms than Hotel C");
-        } else if (comparator.compare(b, c) == -1) {
-            System.out.println("\nHotel C has more rooms than Hotel B");
-        } else if (comparator.compare(b, c) == 0) {
-            System.out.println("\nHotel B has same # rooms as Hotel C"); }
 
         // Convert to Array List
         List<Node<Hotel>> hotelList = new ArrayList<>();
@@ -49,16 +38,24 @@ public class Main {
             System.out.println(node.data);
         }
 
-        // Implement Iterator
-        HotelCatalog catalog = new HotelCatalog();
-        catalog.add(new Hotel("Port Blair", 330, 420));
-        catalog.add(new Hotel("Neil", 50, 250));
-        catalog.add(new Hotel("Samssara", 42, 200));
-        catalog.add(new Hotel("Havelock", 101, 300));
-        System.out.println("\nIterate through Hotel Catalog");
-        for (Hotel node : catalog) {
-            System.out.println(node);
+        // Iterating ///////////////////////////////////////////
+        // Implement Iterator w/o the Iterable Interface
+        System.out.println("\nIterate through Node list (unsorted)");
+        HotelIterator2 iter = new HotelIterator2(list, 100); // maxRooms is dynamic parameter
+        while(iter.hasNext()){
+            System.out.println(iter.next());
         }
+
+//        // Implement Iterator using the Iterable Interface
+//        HotelCatalog catalog = new HotelCatalog(); // HotelCatalog is a Node class w/ an Iterable Interface
+//        catalog.add(new Hotel("Port Blair", 330, 420));
+//        catalog.add(new Hotel("Neil", 50, 250));
+//        catalog.add(new Hotel("Samssara", 42, 200));
+//        catalog.add(new Hotel("Havelock", 101, 300));
+//        System.out.println("\nIterate through Hotel Catalog");
+//        for (Hotel node : catalog) {
+//            System.out.println(node);
+//        }
 
     }
 }

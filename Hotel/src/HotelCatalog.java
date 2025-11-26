@@ -42,7 +42,5 @@ public class HotelCatalog implements Iterable<Hotel> {
             it = it.next;
             return data;
         }
-
     }
-
 }

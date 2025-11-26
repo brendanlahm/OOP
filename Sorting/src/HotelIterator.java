@@ -8,6 +8,7 @@ public class HotelIterator implements Iterator<Hotel> {
     private int index = 0;
     private int maxRooms;  // dynamic parameter
 
+    // Constructor w/ dynamic parameter maxRooms
     public HotelIterator(List<Hotel> list, int maxRooms) {
         this.list = list;
         this.maxRooms = maxRooms;

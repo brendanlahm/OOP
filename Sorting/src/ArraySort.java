@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Sorting {
+public class ArraySort {
 
     private String[] array;
     private int x;

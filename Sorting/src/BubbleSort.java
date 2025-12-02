@@ -1,54 +1,29 @@
-import java.util.Comparator;
+import java.util.Arrays;
 
-public class BubbleSort<T> {
+public class BubbleSort {
 
-    // Private Attributes
-    private Comparator<T> comparator;
+    private int[] nums;
+    private IntSort intSort;
 
-    // Constructors
-    public BubbleSort(Comparator<T> comparator) {
-        this.comparator = comparator;
-    }
+    public void bubble(int[] nums) {
 
-    // Public Node Wrapper
-    public Node<T> sort(Node<T> head) {
-        return bubSort(head);
-    }
-
-    // Private Method
-    private Node<T> bubSort(Node<T> head) {
-
-        if (head == null) { return null; }
-
-        boolean swapped;
-        Node<T> N;
-        Node<T> N1 = null;
-
-        do {
-            N = head;
-            swapped = false;
-            while (N.next != N1) {
-                if (comparator.compare(N.data, N.next.data) > 0) {
-                    T temp = N.data;
-                    N.data = N.next.data;
-                    N.next.data = temp;
-                    swapped = true;
-                }
-                N = N.next;
+        int count = 0;
+        while (count < nums.length - 1) {
+            int x = 0;
+            int y = 1;
+            while (y < nums.length) {
+                if (nums[x] < nums[y]) {
+                    //intSort.swap(nums, x, y);
+                    int temp = nums[x];
+                    nums[x] = nums[y];
+                    nums[y] = temp;
+                    System.out.println(Arrays.toString(nums));
+                } else count++;
+                x++;
+                y++;
             }
-            N1 = N;
-        } while (swapped);
-        return head;
-    }
-
-    // Method for printing the List
-    public <T> void printList(Node<T> head) {
-        Node<T> current = head;
-        while (current != null) {
-            System.out.print(current.data + " ");
-            current = current.next;
+            if (count == nums.length - 1) { break; }
+            else { count = 0; }
         }
-        System.out.println();
     }
-
 }

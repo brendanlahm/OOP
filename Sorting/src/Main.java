@@ -26,30 +26,10 @@ public class Main {
         System.out.println("\nCatalog Head - " + catalog.get(0)); // Print first element in the catalog
 
         // Integer Sorting w/ Bubble Sort
-//        int[] nums = {5,2,3,12,6,9,21};
-//        System.out.println("\n" + Arrays.toString(nums) + "\nLength:" + nums.length);
-//        IntSort intSort = new IntSort();
-//        int count = 0;
-//        while (count < nums.length - 1) {
-//            int x = 0;
-//            int y = 1;
-//            while (y < nums.length) {
-//                if (nums[x] < nums[y]) {
-//                    intSort.swap(nums, x, y);
-//                } else count++;
-//                x++;
-//                y++;
-//            }
-//            if (count == nums.length - 1) { break; }
-//            else { count = 0; }
-//        }
-
-        // UNUSED
-        // Instantiate BubbleSort
-        //BubbleSort<Hotel> bubSort = new BubbleSort(new HotelComparator());
-        //Node<Hotel> list1 = bubSort.sort(list);
-        //System.out.println("\nSort the list by Price");
-        //bubSort.printList(list1);
+        int[] nums = {5,2,3,12,49,6,9,21};
+        System.out.println("\nArray:" + Arrays.toString(nums) + "\nLength:\n" + nums.length);
+        BubbleSort bubSort = new BubbleSort();
+        bubSort.bubble(nums);
 
     }
 }

@@ -1,4 +1,5 @@
 import java.util.*;
+import static java.util.Collections.swap;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,32 +29,49 @@ public class Main {
         catalog.get(3).setRooms(199); // Set # rooms for Havlock to 199
         System.out.println("\nHotel at " + catalog.get(3).getLocation() + " now has " + catalog.get(3).getRooms() + " rooms");
 
-        // Integer Sorting w/ Bubble Sort
-        int[] nums = {5,2,3,12,49,6,9,21};
-        System.out.println("\nArray:" + Arrays.toString(nums) + "\nLength:\n" + nums.length);
-        BubbleSort bubSort = new BubbleSort();
-        //bubSort.bubble(nums);
-
-        // Bubble Sort for ArrayList<Hotel> catalog w/o BubbleSort class
-        int count = 0;
-        while (count < catalog.size() - 1) {
-            int x = 0;
-            int y = 1;
-            while(y < catalog.size()) {
-                if (catalog.get(x).getRooms() > catalog.get(y).getRooms()) {
-                    Hotel temp = catalog.get(x);
-                    catalog.set(x, catalog.get(y));
-                    catalog.set(y, temp);
-                } else count++;
-                x++;
-                y++;
+        // Integer Sorting w/ Selection Sort
+        ArrayList<Hotel> catalogNew = new ArrayList<>();
+        for (int i = 0; i < catalog.size(); i++) {
+            int minPos = i;
+            for (int j = minPos+1; j < catalog.size(); j++) {
+                if (catalog.get(j).getRooms() < catalog.get(minPos).getRooms()) {
+                    minPos = j;
+                }
             }
-            if (count == catalog.size() - 1) { break; }
-            else { count = 0; }
+            if (i != minPos) {swap(catalog, i, minPos);}
         }
         // Print Hotel Catalog
+        System.out.println("\nNew sorted Hotel Catalog:");
         for (Hotel i : catalog) {
             System.out.println(i);
         }
+
+        // Integer Sorting w/ Bubble Sort
+        int[] nums = {5,2,3,12,49,6,9,21};
+        //System.out.println("\nArray:" + Arrays.toString(nums) + "\nLength:\n" + nums.length);
+        //BubbleSort bubSort = new BubbleSort();
+        //bubSort.bubble(nums);
+
+        // Bubble Sort for ArrayList<Hotel> catalog w/o BubbleSort class
+//        int count = 0;
+//        while (count < catalog.size() - 1) {
+//            int x = 0;
+//            int y = 1;
+//            while(y < catalog.size()) {
+//                if (catalog.get(x).getRooms() > catalog.get(y).getRooms()) {
+//                    Hotel temp = catalog.get(x);
+//                    catalog.set(x, catalog.get(y));
+//                    catalog.set(y, temp);
+//                } else count++;
+//                x++;
+//                y++;
+//            }
+//            if (count == catalog.size() - 1) { break; }
+//            else { count = 0; }
+//        }
+//        // Print Hotel Catalog
+//        for (Hotel i : catalog) {
+//            System.out.println(i);
+//        }
     }
 }

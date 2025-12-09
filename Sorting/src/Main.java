@@ -20,9 +20,7 @@ public class Main {
         catalog.add(new Hotel("South Andaman", 111, 150));
 
         // Print Hotel Catalog
-        for (Hotel i : catalog) {
-            System.out.println(i);
-        }
+        catalog.forEach(System.out::println);
 
         System.out.println("\nCatalog size: " + catalog.size()); // Print Catalog size
         System.out.println("\nCatalog Head - " + catalog.get(0)); // Print first element in the catalog
@@ -51,8 +49,6 @@ public class Main {
 
         // Print bubbled Hotel Catalog
         System.out.println("\nNew bubbled Hotel Catalog:");
-        for (Hotel i : bubbledList) {
-            System.out.println(i);
-        }
+        bubbledList.forEach(System.out::println);
     }
 }

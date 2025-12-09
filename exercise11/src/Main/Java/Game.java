@@ -2,6 +2,7 @@ import com.opencsv.bean.CsvBindByName;
 
 public class Game {
 
+    // Private Attributes
     @CsvBindByName
     private int id;
     @CsvBindByName
@@ -19,6 +20,7 @@ public class Game {
     @CsvBindByName
     private int goalsGuest;
 
+    // Getters
     public int getId() { return id; }
     public int getMatchDay() { return matchDay; }
     public String getDate() { return date; }
@@ -28,6 +30,7 @@ public class Game {
     public int getGoalsHome() { return goalsHome; }
     public int getGoalsGuest() { return goalsGuest; }
 
+    // Method for printing a Game
     @Override
     public String toString() {
         return id + " " + matchDay + " " + date + " " + time + " " +

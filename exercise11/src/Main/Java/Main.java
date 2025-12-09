@@ -1,11 +1,10 @@
 import java.io.IOException;
 
 public class Main {
-
     public static void main(String[] args) {
 
         try {
-            Bundesliga bundesliga = Bundesliga.loadFromResource();
+            Bundesliga bundesliga = Bundesliga.loadFromResource(); // Load Data
             System.out.println("Clubs loaded: " + bundesliga.clubs.size());
             System.out.println("Games loaded: " + bundesliga.games.size());
 

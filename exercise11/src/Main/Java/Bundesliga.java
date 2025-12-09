@@ -6,6 +6,7 @@ import com.opencsv.bean.CsvToBeanBuilder;
 
 public class Bundesliga {
 
+    // Attributes
     public Map<Integer, Club> clubs;
     public List<Game> games;
 
@@ -15,6 +16,7 @@ public class Bundesliga {
         this.games = games;
     }
 
+    // Method for importing data
     public static Bundesliga loadFromResource() throws IOException {
         List<Game> games = new CsvToBeanBuilder<Game>(new FileReader("resources/bundesliga_match.csv"))
                 .withType(Game.class)
@@ -29,6 +31,7 @@ public class Bundesliga {
                 .build()
                 .parse();
 
+        // Stream
         Map<Integer, Club> clubs = clubsList.stream()
                 .collect(Collectors.toMap(
                         Club::getId, // key = club's ID

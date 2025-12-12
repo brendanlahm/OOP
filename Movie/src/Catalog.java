@@ -47,12 +47,4 @@ public class Catalog {
         return result;
     }
 
-    // Converted code:
-//        Map <String, Double> stream1 = reviews.stream();
-//        .filter(review -> review.getProvider());
-//        .equals("Netflix"), collect(Collectors.groupby(
-//                Review::getGenre();
-//                Collectors.avgInt(Review::getRating());
-//        ))
-
 }

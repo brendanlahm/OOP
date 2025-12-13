@@ -1,11 +1,7 @@
-package src;
-
 public class Main {
-
-    // Object-Oriented Method
     public static void main(String[] args) {
 
-    // Initiate the tree
+    // Instantiate the tree
     VehicleFleetTree tree = new VehicleFleetTree();
 
     // Add cars to the tree
@@ -18,5 +14,4 @@ public class Main {
     tree.add(311, "Lamborghini", "Aventador", 2020, null, null);
 
     }
-
 }

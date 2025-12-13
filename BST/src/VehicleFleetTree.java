@@ -1,5 +1,3 @@
-package src;
-
 // BST Implementation
 public class VehicleFleetTree {
 

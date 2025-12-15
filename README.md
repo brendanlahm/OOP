@@ -8,6 +8,8 @@ BST: Binary Search Tree
 
 Hotel: Linked List for a Hotel Catalog
 
+HR: Stream for counting employees
+
 Movie: Stream for referencing a Movie Catalog
 
 Sorting: Bubble Sort for a Hotel Catalog
@@ -19,6 +21,8 @@ exercise0: Inheritance
 exercise1: Stack Datastructure
 
 exercise2a: Linked Lists
+
+exercise2b: Sets \& Duplicates
 
 exercise4: Generics
 

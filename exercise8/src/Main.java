@@ -11,15 +11,15 @@ public class Main {
 
         // Instantiate the Power Algorithm
 //        powerCalculation powCalc = new powerCalculation();
-//        powCalc.power(3, 2); // Run the calculation
+//        powCalc.power(2, 3); // Run the calculation
 
         // Recursive method
         powerCalculation recCalc = new powerCalculation(); //
-        recCalc.powerRC(5, 6); // Run the calculation
+        recCalc.powerRC(8, -3); // Run the calculation
 
-        // Forming an array
+        // Forming an array & printing first value
         String[] cars = {"\nVolvo", "BMW", "Ford", "Mazda"};
-        System.out.println("\nFirst car in sequence: " + cars[0]);
+        //System.out.println("\nFirst car in sequence: " + cars[0]);
 
         // Modular Calculation: Summarizing an integer's digits
         int n = 2346;
@@ -28,6 +28,22 @@ public class Main {
             total += n % 10;
             n /= 10;
         }
-        System.out.println("\n" + total);
+        //System.out.println("\n" + total);
+
+        // Power calculation
+        int a = 2; // Initial value
+        int b = 1;
+        int x = 3; // Power of a
+        int count = 0;
+
+        if (x==0) {System.out.println("\nAnswer: " + 1);}
+        else {
+            while (count < x) {
+                b = b * a;
+                count = count + 1;
+            }
+        }
+        //System.out.println("\nAnswer: " + b);
+
     }
 }

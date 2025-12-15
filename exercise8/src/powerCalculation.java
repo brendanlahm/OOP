@@ -12,13 +12,13 @@ public class powerCalculation {
     public double powerRC(double a, int n) {
         if (n == 0) {
             return 1;
-        } else if (n > 0) {
+        } else if (n > 0) { // Positive powers
             System.out.println("\ny = " + Math.pow(a, n));
             return a * powerRC(a, n - 1);
-        } else {
-            // For negative powers: a^(-n) = 1 / a^n
+        } else { // For negative powers: a^(-n) = 1 / a^n
             System.out.println("\ny = " + Math.pow(a, n));
             return 1 / powerRC(a, -n);
         }
     }
+
 }

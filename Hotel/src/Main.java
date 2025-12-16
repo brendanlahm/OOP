@@ -59,7 +59,7 @@ public class Main {
         catalog.add(new Hotel("Havelock", 101, 300));
         catalog.add(new Hotel("Port Blair", 330, 420));
         catalog.add(new Hotel("Neil", 50, 250));
-        catalog.add(new Hotel("Samssara", 42, 500));
+        catalog.add(new Hotel("Samssara", 150, 500));
         catalog.add(new Hotel("Samssara", 150, 150));
 
         System.out.println("\nCatalog Size: " + catalog.size());
@@ -69,8 +69,8 @@ public class Main {
             System.out.println(node);
         }
 
-        // Bubble Sort
-        catalog.bubbleSort();
+        // Bubble Sort using Nodes, Comparator & Iterator
+        catalog.bubbleSort(comparator);
         System.out.println("\nSorted Hotel Catalog:");
         for (Hotel node : catalog) {
             System.out.println(node);

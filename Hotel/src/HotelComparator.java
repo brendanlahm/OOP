@@ -11,6 +11,6 @@ public class HotelComparator implements Comparator<Node<Hotel>> {
         int locationCompare = a.data.getLocation().compareTo(b.data.getLocation()); // Sort by Location second
         if (locationCompare != 0) return locationCompare;
 
-        return Integer.compare(a.data.getPrice(), b.data.getPrice()); // Sort by Price last
+        return Integer.compare(b.data.getPrice(), a.data.getPrice()); // Sort by Price last (a & b switched -> cheapest first!)
     }
 }

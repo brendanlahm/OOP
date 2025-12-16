@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -11,7 +12,7 @@ public class HotelCatalog implements Iterable<Hotel> {
         if (head == null) {
             head = new Node<>(h);
         } else {
-            Node<Hotel> current = head;
+            Node<Hotel> current = head; // Start at the root
             while (current.next != null) {
                 current = current.next;
             }
@@ -23,8 +24,8 @@ public class HotelCatalog implements Iterable<Hotel> {
     public Iterator<Hotel> iterator() {
         return new HotelIterator(head);
     }
-    
-    // Wrapped private Iterator
+
+    // Wrapped private Iterator (inner class)
     private class HotelIterator implements Iterator<Hotel> {
         private Node<Hotel> it;
 
@@ -35,6 +36,7 @@ public class HotelCatalog implements Iterable<Hotel> {
         public boolean hasNext() {
             return it != null;
         }
+
         public Hotel next() {
             if (!hasNext())
                 throw new NoSuchElementException();
@@ -43,4 +45,36 @@ public class HotelCatalog implements Iterable<Hotel> {
             return data;
         }
     }
+
+    // Method for calculating size of the HotelCatalog
+    public int size() {
+        int count = 0;
+        Node<Hotel> it = head;
+
+        while (it != null) {
+            it = it.next;
+            ++count;
+        }
+        return count;
+    }
+
+    // Bubble Sort
+    public void bubbleSort() {
+        if (head == null || head.next == null) {return;}
+
+        int n = size();
+
+        for (int i = 0; i < n - 1; i++) {
+            Node<Hotel> current = head;
+            while (current.next != null) {
+                if (current.next.data.getRooms() > current.data.getRooms()) {
+                    Hotel temp = current.next.data;
+                    current.next.data = current.data;
+                    current.data = temp;
+                }
+                current = current.next;
+            }
+        }
+    }
+
 }

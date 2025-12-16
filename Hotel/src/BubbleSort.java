@@ -2,12 +2,15 @@ import java.util.Comparator;
 
 public class BubbleSort {
 
+    // Private Attributes
     private Comparator<Node<Hotel>> comparator;
 
+    // Public Constructor
     public BubbleSort(Comparator<Node<Hotel>> comparator) {
         this.comparator = comparator;
     }
 
+    // Sorting method
     public Node<Hotel> sort(Node<Hotel> head) {
 
         if (head == null || head.next == null) {

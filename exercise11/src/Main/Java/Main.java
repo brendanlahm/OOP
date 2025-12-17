@@ -23,10 +23,14 @@ public class Main {
 
             // Print average goals in a match using stream
             double averageGoals = bundesliga.games.stream()
-                    .mapToInt(game -> game.getGoalsHome() + game.getGoalsGuest())
+                    .filter(game ->  // Filter to require first league (Avg. 3.219 goals per match)
+                            bundesliga.clubs.get(game.getClubIdHome()).getLeague() == 1 &&
+                                    bundesliga.clubs.get(game.getClubIdGuest()).getLeague() == 1
+                    )
+                    .mapToInt(game -> game.getGoalsHome() + game.getGoalsGuest()) // Avg. goals/match in all leagues = 3.022 goals
                     .average()
                     .orElse(0.0);
-            System.out.println("\nAverage goals per match: " + averageGoals);
+            System.out.println("\nAverage goals per match in first League: " + averageGoals);
 
 
         } catch (IOException e) {

@@ -21,11 +21,8 @@ public class FibonacciSeq {
 
     // Recursive method
     public int fibRC(int x) {
-        if(x == 0)
-            return 0;
-        if(x == 1)
-            return 1;
-        System.out.println("Fibonacci Numbers:\n" + x);
+        if(x <= 1)
+            return x;
         return fibRC(x-1) + fibRC(x-2);
     }
 

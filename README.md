@@ -14,6 +14,8 @@ Movie: Stream for referencing a Movie Catalog
 
 Sorting: Bubble Sort for a Hotel Catalog
 
+Tour: Report Generator for a Hiking Tour Program
+
 
 
 exercise0: Inheritance

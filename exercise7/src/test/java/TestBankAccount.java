@@ -31,6 +31,11 @@ public class TestBankAccount {
 
      @Test
      void testZeroDepositAmount() {
+
+        // Test zero deposit
+         account.deposit(0);
+         Assertions.assertEquals(INITIAL_BALANCE, account.getBalance(), 0.001);
+
      }
 
      @Test

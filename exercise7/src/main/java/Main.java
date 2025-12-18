@@ -2,13 +2,22 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Power Calculation
+        // Instantiate the calculator
+        PowerCalculation powerCalc = new PowerCalculation();
+        //powerCalc.powerRC(2,3);
+        System.out.println("\nPower calculation answer: " + powerCalc.powerRC(2,3)); // a: double, n: int
+
+        // Prime # Analyzer
         // Instantiate the Prime # Analyzer
-        System.out.println("This is the Prime # Analyzer.");
+        System.out.println("\nThis is the Prime # Analyzer.");
         PrimeAnalyzer primeAnalyzer = new PrimeAnalyzer();
-        // Is 17 is a prime #?
+
+        // Is 17 a prime #?
         boolean result = primeAnalyzer.isPrime(17);
         System.out.println("Is 17 a prime #?\n" + result + "\n");
 
+        // Bank Account
         //Instantiate the Bank Account
         BankAccount bank = new BankAccount(0.0);
         bank.deposit(125000.25); // Deposit $

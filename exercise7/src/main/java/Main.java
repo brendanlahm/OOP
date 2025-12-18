@@ -7,6 +7,8 @@ public class Main {
         PowerCalculation powerCalc = new PowerCalculation();
         //powerCalc.powerRC(2,3);
         System.out.println("\nPower calculation answer: " + powerCalc.powerRC(2,3)); // a: double, n: int
+        System.out.println("\nPower calculation answer: " + powerCalc.powerRC(2,-300)); // Negative n
+        System.out.println("\nPower calculation answer: " + powerCalc.powerRC(-2,3)); // Negative a
 
         // Prime # Analyzer
         // Instantiate the Prime # Analyzer

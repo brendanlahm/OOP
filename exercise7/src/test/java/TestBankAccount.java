@@ -65,6 +65,6 @@ public class TestBankAccount {
     void testWithdrawNegativeAmount() {}
 
     @Test
-    void TestWithdrawZeroAmount() {}
+    void testWithdrawZeroAmount() {}
 
 }
